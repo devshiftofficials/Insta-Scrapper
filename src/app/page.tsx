@@ -2,8 +2,20 @@
 
 import { useState } from 'react';
 
+interface SearchResults {
+  niche: string;
+  trendingHashtags: Array<{ tag: string; posts: string; trend: string }>;
+  trendingAudios: Array<{ title: string; plays: string; trend: string }>;
+  topInfluencers: Array<{ username: string; followers: string; engagement: string }>;
+  bestPostingTimes: string[];
+  contentIdeas: string[];
+}
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState('trending');
+  const [searchNiche, setSearchNiche] = useState('');
+  const [isSearching, setIsSearching] = useState(false);
+  const [searchResults, setSearchResults] = useState<SearchResults | null>(null);
 
   const trendingAudios = [
     { id: 1, title: "Summer Vibes 2024", plays: "2.3M", trend: "+45%" },
@@ -26,6 +38,40 @@ export default function Home() {
     { id: 4, username: "@fashion_icon", likes: "76K", comments: "1.9K", shares: "4.8K" },
   ];
 
+  const handleSearch = async () => {
+    if (!searchNiche.trim()) return;
+    
+    setIsSearching(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      const results: SearchResults = {
+        niche: searchNiche,
+        trendingHashtags: [
+          { tag: `#${searchNiche}2024`, posts: "1.2M", trend: "+67%" },
+          { tag: `#${searchNiche}Life`, posts: "890K", trend: "+45%" },
+          { tag: `#${searchNiche}Tips`, posts: "650K", trend: "+38%" },
+        ],
+        trendingAudios: [
+          { title: `${searchNiche} Motivation`, plays: "1.8M", trend: "+52%" },
+          { title: `${searchNiche} Vibes`, plays: "1.3M", trend: "+41%" },
+        ],
+        topInfluencers: [
+          { username: `@${searchNiche}_expert`, followers: "2.1M", engagement: "8.5%" },
+          { username: `@${searchNiche}_guru`, followers: "1.8M", engagement: "7.2%" },
+        ],
+        bestPostingTimes: ["9:00 AM", "1:00 PM", "7:00 PM"],
+        contentIdeas: [
+          `${searchNiche} transformation stories`,
+          `${searchNiche} tips and tricks`,
+          `${searchNiche} behind the scenes`,
+        ]
+      };
+      setSearchResults(results);
+      setIsSearching(false);
+    }, 2000);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-red-50">
       {/* Navigation */}
@@ -44,7 +90,7 @@ export default function Home() {
               <a href="#features" className="text-gray-700 hover:text-pink-600 transition-colors">Features</a>
               <a href="#dashboard" className="text-gray-700 hover:text-pink-600 transition-colors">Dashboard</a>
               <a href="#roadmap" className="text-gray-700 hover:text-pink-600 transition-colors">Roadmap</a>
-              <a href="#pricing" className="text-gray-700 hover:text-pink-600 transition-colors">Pricing</a>
+              <a href="#search" className="text-gray-700 hover:text-pink-600 transition-colors">Search</a>
             </div>
             <button className="gradient-primary text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               Get Started
@@ -76,6 +122,154 @@ export default function Home() {
                 Watch Demo
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Search Section */}
+      <section id="search" className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+              Discover Your Niche
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Enter your niche or industry to get personalized Instagram insights, trending content, and growth strategies
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl p-8 shadow-2xl">
+            <div className="flex flex-col md:flex-row gap-4 mb-8">
+              <div className="flex-1">
+                <input
+                  type="text"
+                  placeholder="Enter your niche (e.g., fitness, travel, food, fashion)"
+                  value={searchNiche}
+                  onChange={(e) => setSearchNiche(e.target.value)}
+                  className="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:border-pink-500 focus:outline-none text-lg transition-all duration-300"
+                  onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+                />
+              </div>
+              <button
+                onClick={handleSearch}
+                disabled={isSearching || !searchNiche.trim()}
+                className="gradient-primary text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+              >
+                {isSearching ? (
+                  <div className="flex items-center space-x-2">
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <span>Analyzing...</span>
+                  </div>
+                ) : (
+                  'Analyze Niche'
+                )}
+              </button>
+            </div>
+
+            {searchResults && (
+              <div className="space-y-8 animate-fadeInUp">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    Insights for "{searchResults.niche}" Niche
+                  </h3>
+                  <p className="text-gray-600">Personalized data and recommendations</p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-6">
+                    <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                      <svg className="w-6 h-6 text-pink-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+                      </svg>
+                      Trending Hashtags
+                    </h4>
+                    <div className="space-y-3">
+                      {searchResults.trendingHashtags.map((hashtag, index) => (
+                        <div key={index} className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                          <span className="font-medium text-blue-600">{hashtag.tag}</span>
+                          <div className="text-right">
+                            <div className="text-sm text-gray-600">{hashtag.posts} posts</div>
+                            <div className="text-sm text-green-600 font-semibold">{hashtag.trend}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6">
+                    <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                      <svg className="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                      </svg>
+                      Trending Audios
+                    </h4>
+                    <div className="space-y-3">
+                      {searchResults.trendingAudios.map((audio, index) => (
+                        <div key={index} className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                          <span className="font-medium">{audio.title}</span>
+                          <div className="text-right">
+                            <div className="text-sm text-gray-600">{audio.plays} plays</div>
+                            <div className="text-sm text-green-600 font-semibold">{audio.trend}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6">
+                    <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                      <svg className="w-6 h-6 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      Top Influencers
+                    </h4>
+                    <div className="space-y-3">
+                      {searchResults.topInfluencers.map((influencer, index) => (
+                        <div key={index} className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                          <span className="font-medium">{influencer.username}</span>
+                          <div className="text-right">
+                            <div className="text-sm text-gray-600">{influencer.followers} followers</div>
+                            <div className="text-sm text-green-600 font-semibold">{influencer.engagement} engagement</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-6">
+                    <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                      <svg className="w-6 h-6 text-orange-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Best Posting Times
+                    </h4>
+                    <div className="space-y-3">
+                      {searchResults.bestPostingTimes.map((time, index) => (
+                        <div key={index} className="flex justify-center items-center p-3 bg-white rounded-lg shadow-sm">
+                          <span className="font-medium text-orange-600">{time}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-6">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <svg className="w-6 h-6 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                    Content Ideas
+                  </h4>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {searchResults.contentIdeas.map((idea, index) => (
+                      <div key={index} className="p-4 bg-white rounded-lg shadow-sm">
+                        <span className="text-gray-700">{idea}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -376,10 +570,10 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Product</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">API</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Integrations</a></li>
+                <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
+                <li><a href="#search" className="hover:text-white transition-colors">Niche Search</a></li>
+                <li><a href="#dashboard" className="hover:text-white transition-colors">Analytics</a></li>
+                <li><a href="#roadmap" className="hover:text-white transition-colors">Growth Roadmap</a></li>
               </ul>
             </div>
             <div>
