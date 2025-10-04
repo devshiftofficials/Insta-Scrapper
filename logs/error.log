@@ -1,0 +1,104 @@
+[2025-10-04T10:35:57.220Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:35:57.235Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:35:57.348Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:35:57.562Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:35:57.878Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:35:58.286Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:35:58.803Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:35:59.415Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:36:00.119Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:36:00.937Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:36:01.841Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:36:02.848Z] ERROR: Redis connection error:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:36:02.849Z] ERROR: Redis connection failed:
+AggregateError
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:39:55.764Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:39:55.799Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:39:55.911Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:39:56.124Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:39:56.438Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:39:56.848Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:39:57.353Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:39:57.962Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:39:58.665Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:39:59.478Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:40:00.387Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:40:01.405Z] ERROR: Redis connection error:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)
+[2025-10-04T10:40:01.406Z] ERROR: Redis connection failed:
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7)

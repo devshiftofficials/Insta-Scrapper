@@ -170,7 +170,7 @@ export default function Home() {
               <div className="space-y-8 animate-fadeInUp">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                    Insights for "{searchResults.niche}" Niche
+                    Insights for &quot;{searchResults.niche}&quot; Niche
                   </h3>
                   <p className="text-gray-600">Personalized data and recommendations</p>
                 </div>
@@ -495,7 +495,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Analyze Trends</h3>
               <p className="text-gray-600">
-                Discover what's trending in your niche and identify opportunities for viral content.
+                Discover what&apos;s trending in your niche and identify opportunities for viral content.
               </p>
             </div>
 

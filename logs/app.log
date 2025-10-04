@@ -1,0 +1,43 @@
+[2025-10-04T10:35:57.200Z] INFO: ✅ MongoDB connected successfully
+[2025-10-04T10:35:57.220Z] ERROR: Redis connection error:
+[2025-10-04T10:35:57.235Z] ERROR: Redis connection error:
+[2025-10-04T10:35:57.348Z] ERROR: Redis connection error:
+[2025-10-04T10:35:57.450Z] INFO: Browser initialized successfully
+[2025-10-04T10:35:57.562Z] ERROR: Redis connection error:
+[2025-10-04T10:35:57.878Z] ERROR: Redis connection error:
+[2025-10-04T10:35:58.286Z] ERROR: Redis connection error:
+[2025-10-04T10:35:58.803Z] ERROR: Redis connection error:
+[2025-10-04T10:35:59.415Z] ERROR: Redis connection error:
+[2025-10-04T10:36:00.119Z] ERROR: Redis connection error:
+[2025-10-04T10:36:00.937Z] ERROR: Redis connection error:
+[2025-10-04T10:36:01.841Z] ERROR: Redis connection error:
+[2025-10-04T10:36:02.847Z] ERROR: Redis max retry attempts reached
+[2025-10-04T10:36:02.848Z] ERROR: Redis connection error:
+[2025-10-04T10:36:02.849Z] ERROR: Redis connection failed:
+[2025-10-04T10:36:02.850Z] WARN: Continuing without Redis cache
+[2025-10-04T10:36:02.853Z] INFO: 🚀 Server running on port 5000
+[2025-10-04T10:36:02.853Z] INFO: 📊 Environment: undefined
+[2025-10-04T10:36:02.854Z] INFO: 🔗 Health check: http://localhost:5000/health
+[2025-10-04T10:36:17.015Z] INFO: ::1 - - [04/Oct/2025:10:36:17 +0000] "GET /health HTTP/1.1" 200 74 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+[2025-10-04T10:36:17.455Z] INFO: ::1 - - [04/Oct/2025:10:36:17 +0000] "GET /favicon.ico HTTP/1.1" 404 67 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+[2025-10-04T10:36:45.636Z] INFO: ::1 - - [04/Oct/2025:10:36:45 +0000] "GET /health HTTP/1.1" 200 74 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+[2025-10-04T10:39:55.741Z] INFO: ✅ MongoDB connected successfully
+[2025-10-04T10:39:55.764Z] ERROR: Redis connection error:
+[2025-10-04T10:39:55.799Z] ERROR: Redis connection error:
+[2025-10-04T10:39:55.911Z] ERROR: Redis connection error:
+[2025-10-04T10:39:55.934Z] INFO: Browser initialized successfully
+[2025-10-04T10:39:56.124Z] ERROR: Redis connection error:
+[2025-10-04T10:39:56.438Z] ERROR: Redis connection error:
+[2025-10-04T10:39:56.848Z] ERROR: Redis connection error:
+[2025-10-04T10:39:57.353Z] ERROR: Redis connection error:
+[2025-10-04T10:39:57.962Z] ERROR: Redis connection error:
+[2025-10-04T10:39:58.665Z] ERROR: Redis connection error:
+[2025-10-04T10:39:59.478Z] ERROR: Redis connection error:
+[2025-10-04T10:40:00.387Z] ERROR: Redis connection error:
+[2025-10-04T10:40:01.404Z] ERROR: Redis max retry attempts reached
+[2025-10-04T10:40:01.405Z] ERROR: Redis connection error:
+[2025-10-04T10:40:01.406Z] ERROR: Redis connection failed:
+[2025-10-04T10:40:01.407Z] WARN: Continuing without Redis cache
+[2025-10-04T10:40:01.412Z] INFO: 🚀 Server running on port 5000
+[2025-10-04T10:40:01.412Z] INFO: 📊 Environment: undefined
+[2025-10-04T10:40:01.413Z] INFO: 🔗 Health check: http://localhost:5000/health
